@@ -162,7 +162,7 @@ const CoinPage = () => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <button className="w-full my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl font-bold">
+                      <button className="w-full my-2 py-3 px-6 bg-button text-btnText rounded-2xl shadow-xl font-bold">
                         Go to docs
                       </button>
                     </a>
@@ -172,10 +172,28 @@ const CoinPage = () => {
             </div>
           </div>
           <div className="flex justify-around p-4 text-accent">
-            <FaTwitter size={25} />
+            <a
+              href={`https://twitter.com/${coin?.links?.twitter_screen_name}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaTwitter size={25} />
+            </a>
             <FaFacebook size={25} />
-            <FaReddit size={25} />
-            <FaGithub size={25} />
+            <a
+              href={`${coin?.links?.subreddit_url}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaReddit size={25} />
+            </a>
+            <a
+              href={`${coin?.links?.repos_url?.github[0]}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub size={25} />
+            </a>
           </div>
         </div>
       </div>

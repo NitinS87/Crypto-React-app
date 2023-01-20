@@ -48,11 +48,11 @@ const Footer = () => {
                 </form>
               </div>
               <div className="flex py-4  justify-between text-accent">
-                <AiOutlineInstagram />
-                <FaTiktok />
-                <FaTwitter />
-                <FaFacebookF />
-                <FaGithub />
+                <AiOutlineInstagram size={25} />
+                <FaTiktok size={25}/>
+                <FaTwitter size={25}/>
+                <FaFacebookF size={25}/>
+                <FaGithub size={25}/>
               </div>
             </div>
           </div>
