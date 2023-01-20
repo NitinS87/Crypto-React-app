@@ -125,30 +125,49 @@ const CoinPage = () => {
             </div>
           </div>
           <div className="flex justify-between py-4">
-            <div>
-              <div>
-                <p className="text-gray-500 text-sm">Price Change (30d)</p>
-                {coin?.market_data ? (
-                  <p>
-                    {coin?.market_data.price_change_percentage_30d.toFixed(2)}%
-                  </p>
-                ) : null}
+            <div className="flex">
+              <div className="mr-24">
+                <div>
+                  <p className="text-gray-500 text-sm">Price Change (30d)</p>
+                  {coin?.market_data ? (
+                    <p>
+                      {coin?.market_data.price_change_percentage_30d.toFixed(2)}
+                      %
+                    </p>
+                  ) : null}
+                </div>
+                <div>
+                  <p className="text-gray-500 text-sm">Price Change (60d)</p>
+                  {coin?.market_data ? (
+                    <p>
+                      {coin?.market_data.price_change_percentage_60d.toFixed(2)}
+                      %
+                    </p>
+                  ) : null}
+                </div>
+                <div>
+                  <p className="text-gray-500 text-sm">Price Change (1Y)</p>
+                  {coin?.market_data ? (
+                    <p>
+                      {coin?.market_data.price_change_percentage_1y.toFixed(2)}%
+                    </p>
+                  ) : null}
+                </div>
               </div>
               <div>
-                <p className="text-gray-500 text-sm">Price Change (60d)</p>
-                {coin?.market_data ? (
-                  <p>
-                    {coin?.market_data.price_change_percentage_60d.toFixed(2)}%
-                  </p>
-                ) : null}
-              </div>
-              <div>
-                <p className="text-gray-500 text-sm">Price Change (1Y)</p>
-                {coin?.market_data ? (
-                  <p>
-                    {coin?.market_data.price_change_percentage_1y.toFixed(2)}%
-                  </p>
-                ) : null}
+                <div>
+                  {coin?.links?.homepage[0] ? (
+                    <a
+                      href={`${coin?.links?.homepage[0]}`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <button className="w-full my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl font-bold">
+                        Go to docs
+                      </button>
+                    </a>
+                  ) : null}
+                </div>
               </div>
             </div>
           </div>
